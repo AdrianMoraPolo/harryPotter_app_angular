@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="character.image" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="text-center">{{character.name}}</h4>
+      <button 
+      *ngIf="character.house !== 'Slytherin'" 
+      class="btn" 
+      [ngClass]="{'btn-danger': character.house === 'Gryffindor', 'btn-primary': character.house !== 'Gryffindor', 'btn-success': character.house ==='Slytherin'}"></button>
+    </div>
+  </div>
+
+    <!-- ngIf =para que no se muestren los slytherin el botton -->
